@@ -1,0 +1,20 @@
+<html lang="en">
+  <head>
+    <script>
+      // Write a JavaScript function that prompts the user to input a number, and then gives them 5 chances to guess the square of the number.
+      var numberString = prompt("Pick a number:", "");
+      var number = Number(numberString);
+      var correct = false;
+      var square = number * number;
+      for (var i = 0; i < 5; i++) {
+        var guess = prompt("Guess the square of the number:", "");
+        if (square === Number(guess)) {
+          correct = true;
+          break;
+        }
+      }
+      window.alert((correct ? "Hooray! You guessed the number, " : "Too bad, ") + "refresh to play again!");
+    </script>
+  </head>
+  <body></body>
+</html>
